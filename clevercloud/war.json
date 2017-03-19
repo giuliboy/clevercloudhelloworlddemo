@@ -3,7 +3,7 @@
       "container": "TOMCAT8",
       "war": [
          {
-            "file": "target/clevercloudhelloworld.war"
+            "file": "clevercloudhelloworld/target/clevercloudhelloworld.war"
          }
       ]
    }
