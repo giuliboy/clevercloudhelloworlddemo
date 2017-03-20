@@ -2,6 +2,7 @@ package net.giuli.clevercloud;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
 import java.util.Properties;
 
 import javax.servlet.ServletException;
@@ -38,8 +39,8 @@ public class HelloWorldServlet extends HttpServlet {
 		writer.println("	<h1>Hello World from a Servlet!</h1>");
 		writer.println("	<h1>Hello World from a Sevlet!</h1>");
 		
-		for(Object property : _properties.values()){
-			writer.println("	<p>" + property + "</p>");
+		for(Map.Entry<Object,Object>  entry : _properties.entrySet()){
+			writer.println("<p>" + entry.getKey() + " = "  + entry.getValue() + "</p>");
 		}
 		
 		writer.println("<body>");
