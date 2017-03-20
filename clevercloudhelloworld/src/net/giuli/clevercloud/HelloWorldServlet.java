@@ -37,7 +37,6 @@ public class HelloWorldServlet extends HttpServlet {
 		writer.println("<head><title>Hello World Servlet</title></head>");
 		writer.println("<body>");
 		writer.println("	<h1>Hello World from a Servlet!</h1>");
-		writer.println("	<h1>Hello World from a Sevlet!</h1>");
 		
 		for(Map.Entry<Object,Object>  entry : _properties.entrySet()){
 			writer.println("<p>" + entry.getKey() + " = "  + entry.getValue() + "</p>");
