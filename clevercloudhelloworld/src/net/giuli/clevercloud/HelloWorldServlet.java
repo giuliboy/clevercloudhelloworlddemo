@@ -35,7 +35,7 @@ public class HelloWorldServlet extends HttpServlet {
 		writer.println("<html>");
 		writer.println("<head><title>Hello World Servlet</title></head>");
 		writer.println("<body>");
-		writer.println("	<h1>Hello World from a Sevlet!</h1>");
+		writer.println("	<h1>Hello World from a Servlet!</h1>");
 		
 		for(Object property : _properties.values()){
 			writer.println("	<p>" + property + "</p>");
