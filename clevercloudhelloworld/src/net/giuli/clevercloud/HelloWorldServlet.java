@@ -2,6 +2,7 @@ package net.giuli.clevercloud;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Properties;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,12 +17,13 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloWorldServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	private Properties _properties;
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public HelloWorldServlet() {
 		super();
-		// TODO Auto-generated constructor stub
+		_properties = System.getProperties();
 	}
 
 	/**
@@ -34,6 +36,11 @@ public class HelloWorldServlet extends HttpServlet {
 		writer.println("<head><title>Hello World Servlet</title></head>");
 		writer.println("<body>");
 		writer.println("	<h1>Hello World from a Sevlet!</h1>");
+		
+		for(Object property : _properties.values()){
+			writer.println("	<p>" + property + "</p>");
+		}
+		
 		writer.println("<body>");
 		writer.println("</html>");
 
